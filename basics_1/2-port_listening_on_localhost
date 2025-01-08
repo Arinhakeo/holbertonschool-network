@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# port 98 sur le serveur local
+echo "Listening on port 98..."
+nc -l 0.0.0.0 98
