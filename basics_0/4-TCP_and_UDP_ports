@@ -1,5 +1,14 @@
-#!/usr/bin/env bash
-# sctipt to show listning sockets
+#!/bin/bash
 
-netstat -pnltu
-netstat -pxl
+# Vérifie si l'utilisateur a les droits root
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run as root"
+  exit
+fi
+
+# Affiche les sockets en écoute avec le PID et le nom du programme
+echo "Active Internet connections (only servers)"
+netstat -tulpn | grep LISTEN
+
+echo -e "\nActive UNIX domain sockets (only servers)"
+netstat -xpln | grep LISTEN
