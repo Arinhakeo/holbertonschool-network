@@ -11,4 +11,3 @@ else
 		ping -c 5 "$1"
 		shift
 	done
-fi
