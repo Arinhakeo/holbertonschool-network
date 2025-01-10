@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Exemple de script pour afficher les ports TCP et UDP
+# sctipt to show listning sockets
 
-netstat -l --program
+netstat -pnltu
+netstat -pxl
