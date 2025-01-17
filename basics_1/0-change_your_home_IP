@@ -1,0 +1,11 @@
+#!/bin/bash
+# Nom de l'interface réseau (ex: eth0, ens33, wlan0)
+INTERFACE="eth0"
+
+# Nouvelle adresse IP
+NEW_IP="127.0.0.2"
+
+# Changer l'adresse IP
+sudo ip addr flush dev $INTERFACE
+sudo ip addr add $NEW_IP/24 dev $INTERFACE
+sudo ip link set $INTERFACE up
