@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Exemple de script pour afficher les ports TCP et UDP
 
-netstat -pulnt| grep LISTEN
-netstat -puln
+# netstat -pulnt| grep LISTEN
+# netstat -puln
+
+netstat -1 --program
